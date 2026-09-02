@@ -6,14 +6,14 @@ interface TabNavigationProps {
 const tabs = [
   { id: "about", label: "My About" },
   { id: "resume", label: "My Resume" },
-  // { id: "work", label: "My Work" },
-  // { id: "blog", label: "My Blog" },
+  { id: "work", label: "My Work" },
+  { id: "blog", label: "My Blog" },
   { id: "contact", label: "My Contact" },
 ];
 
 const TabNavigation = ({ activeSection, onSectionChange }: TabNavigationProps) => {
   return (
-    <div className="glass-card p-2 mb-8 inline-flex flex-wrap gap-1">
+    <div className="glass-card p-2 mb-8 inline-flex flex-wrap gap-1 bg-white/95 border border-slate-200 shadow-sm rounded-full">
       {tabs.map((tab) => (
         <button
           key={tab.id}

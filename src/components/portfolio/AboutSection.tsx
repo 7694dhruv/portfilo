@@ -44,13 +44,13 @@ const AboutSection = () => {
   return (
     <div className="animate-fade-in">
       {/* About Me */}
-      <div className="mb-12">
-        <span className="section-label mb-4 inline-block">About Me</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6 leading-tight">
+      <div className="mb-10">
+        <span className="section-label mb-3">About Me</span>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 leading-tight">
           Boost Business Strategic<br />
           <span className="text-primary">Solutions</span> with Us
         </h2>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl">
+        <p className="text-slate-600 leading-relaxed max-w-3xl text-sm sm:text-base">
           Hello! I'm Dhruv Mojila, a passionate Web Developer, Graphic Designer, Data Analyst based in Dhaka. 
           With a strong focus on creativity, innovation, and a commitment to continuous learning, 
           I bring a unique blend of technical skills and artistic vision to each project I undertake.
@@ -58,18 +58,18 @@ const AboutSection = () => {
       </div>
 
       {/* What I Do */}
-      <div className="mb-12">
-        <h3 className="text-xl font-display font-semibold text-foreground mb-6">What I Do?</h3>
+      <div className="mb-10">
+        <h3 className="text-xl font-display font-bold text-foreground mb-6">What I Do?</h3>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="cyan-icon mb-4">
-                <service.icon className="w-6 h-6" />
+            <div key={index} className="service-card group">
+              <div className="cyan-icon mb-4 group-hover:scale-105 transition-transform">
+                <service.icon className="w-5 h-5" />
               </div>
-              <h4 className="text-lg font-display font-semibold text-foreground mb-3">
+              <h4 className="text-base font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {service.title}
               </h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -78,12 +78,12 @@ const AboutSection = () => {
       </div>
 
       {/* Stats */}
-      <div className="glass-card p-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
+      <div className="glass-card p-4 sm:p-6 shadow-sm border border-slate-200/80 bg-white/90">
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
           {stats.map((stat, index) => (
-            <div key={index} className="stat-card">
-              <div className="stat-number text-primary">{stat.value}</div>
-              <p className="text-muted-foreground text-sm mt-2">{stat.label}</p>
+            <div key={index} className="stat-card py-4 sm:py-2">
+              <div className="stat-number">{stat.value}</div>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium mt-1">{stat.label}</p>
             </div>
           ))}
         </div>
